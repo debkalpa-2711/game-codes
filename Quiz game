@@ -1,0 +1,26 @@
+#package import
+from random import randint
+
+#veriable declare
+secret_number = randint(1,100)
+guess_limit = 3
+guess_count = 0
+
+#logic
+for i in range(0, guess_limit):
+    guess = int(input("enter the guess >> "))
+    guess_count += 1
+
+    if guess != secret_number:
+        if guess > secret_number:
+            print("guess should have been lower ")
+        else:
+            print("guess should have been higher")
+    else:
+        pass
+
+    if guess == secret_number:
+        print("you won !")
+
+#secret number
+print(f"the secret number is >> {secret_number}")
